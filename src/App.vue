@@ -2,6 +2,7 @@
   <div
     class="grid gap-4 my-auto align-middle grid-cols-1-to-2 justify-items-center"
   >
+    <h1 class="col-span-2 mb-4 text-2xl font-bold">Number Convertion Tool</h1>
     <label
       for="decimal"
       class="self-center font-semibold text-gray-700 justify-self-end"
