@@ -1,5 +1,7 @@
 <template>
-  <div class="grid grid-cols-2 gap-4 my-auto align-middle justify-items-center">
+  <div
+    class="grid gap-4 my-auto align-middle grid-cols-1-to-2 justify-items-center"
+  >
     <label
       for="decimal"
       class="self-center font-semibold text-gray-700 justify-self-end"
