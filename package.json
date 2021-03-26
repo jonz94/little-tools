@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "deploy": "git checkout production && git rebase main && git push && git checkout main",
     "serve": "vite preview"
   },
   "dependencies": {
