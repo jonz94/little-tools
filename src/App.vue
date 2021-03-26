@@ -36,7 +36,7 @@
         @keyup="calculateFromBinary()"
         id="binary"
         type="text"
-        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
+        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
       />
       <Button @copy="copyToClipboard(binary)"></Button>
     </div>
@@ -76,7 +76,7 @@
         @keyup="calculateFromHexadecimal()"
         id="hexadecimal"
         type="text"
-        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
+        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
       />
       <Button @copy="copyToClipboard(hexadecimal)"></Button>
     </div>
