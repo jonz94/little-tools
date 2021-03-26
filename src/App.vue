@@ -83,7 +83,7 @@ function fromDecimal(decimal: string, base: number) {
 }
 
 function toDecimal(input: string, base: number) {
-  return parseInt(input, 2).toString(base);
+  return parseInt(input, base).toString();
 }
 
 export default defineComponent({
@@ -164,6 +164,9 @@ export default defineComponent({
       }
 
       this.decimal = toDecimal(this.hexadecimal, 16);
+
+      console.log(this.decimal);
+      console.log(this.hexadecimal);
 
       this.binary = fromDecimal(this.decimal, 2);
       this.octal = fromDecimal(this.decimal, 8);
