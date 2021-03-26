@@ -17,6 +17,7 @@
         type="text"
         class="w-full h-10 px-3 pl-12 pr-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
       />
+      <Button @copy="copyToClipboard(decimal)"></Button>
     </div>
 
     <label
@@ -36,6 +37,7 @@
         type="text"
         class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
       />
+      <Button @copy="copyToClipboard(binary)"></Button>
     </div>
 
     <label
@@ -55,6 +57,7 @@
         type="text"
         class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
       />
+      <Button @copy="copyToClipboard(octal)"></Button>
     </div>
 
     <label
@@ -74,12 +77,14 @@
         type="text"
         class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
       />
+      <Button @copy="copyToClipboard(hexadecimal)"></Button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Button from './components/Button.vue';
 
 function fromDecimal(decimal: string, base: number) {
   return Number(decimal).toString(base);
@@ -91,6 +96,9 @@ function toDecimal(input: string, base: number) {
 
 export default defineComponent({
   name: 'App',
+  components: {
+    Button,
+  },
   data() {
     return {
       decimal: '123',
@@ -170,6 +178,21 @@ export default defineComponent({
 
       this.binary = fromDecimal(this.decimal, 2);
       this.octal = fromDecimal(this.decimal, 8);
+    },
+    async copyToClipboard(text: string) {
+      if (
+        typeof navigator === 'undefined' ||
+        !navigator.clipboard ||
+        !navigator.clipboard.writeText
+      ) {
+        console.error('Writting to clipboard not supported in this browser');
+      }
+
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 });
