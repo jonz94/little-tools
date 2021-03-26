@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid gap-4 my-auto align-middle grid-cols-1-to-2 justify-items-center"
+    class="grid gap-4 my-auto align-middle grid-cols-1-to-3 justify-items-center"
   >
     <h1 class="col-span-2 mb-4 text-2xl font-bold">Number Convertion Tool</h1>
     <label
@@ -9,13 +9,14 @@
     >
       decimal
     </label>
-    <div class="flex w-2/3">
+    <div class="flex w-full">
+      <div class="w-12 px-3 py-2"></div>
       <input
         v-model="decimal"
         @keyup="calculateFromDecimal()"
         id="decimal"
         type="text"
-        class="w-full h-10 px-3 pl-12 pr-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
+        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
       />
       <Button @copy="copyToClipboard(decimal)"></Button>
     </div>
@@ -26,8 +27,8 @@
     >
       binary
     </label>
-    <div class="flex w-2/3">
-      <div class="px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
+    <div class="flex w-full">
+      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
         0b
       </div>
       <input
@@ -46,8 +47,8 @@
     >
       octal
     </label>
-    <div class="flex w-2/3">
-      <div class="px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
+    <div class="flex w-full">
+      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
         0o
       </div>
       <input
@@ -66,8 +67,8 @@
     >
       hexadecimal
     </label>
-    <div class="flex w-2/3">
-      <div class="px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
+    <div class="flex w-full">
+      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
         0x
       </div>
       <input
