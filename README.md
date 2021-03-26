@@ -6,7 +6,7 @@ Little Tools craft with ❤
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dd5793dc-8b92-4975-b6e3-ef1c270b37ce/deploy-status)](https://app.netlify.com/sites/little-tools/deploys)
 
-Site: https://little-tools.netlify.app
+Site: https://little-tools.jonz94.dev
 
 ## Features
 
