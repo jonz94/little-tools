@@ -12,10 +12,17 @@ Site: https://little-tools.jonz94.dev
 
 Currently, only number conversion tool is available 🙃
 
-## Technical Detail
+## Development
+
+### Branching
+
+* `main` is the development branch.
+* `production` is for releasing. It will automatically trigger netlify build & deploy when anything is pushed to this branch.
+
+### Technical Detail
 
 This project using Vue 3 + Typescript + Vite, along with Tailwind CSS.
 
-## Recommended IDE Setup
+### Recommended IDE Setup
 
-Currently, using [VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) is recommended.
+[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) is recommended.
