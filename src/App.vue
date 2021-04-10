@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid gap-4 my-auto align-middle grid-cols-1-to-3 justify-items-center"
+    class="grid gap-4 my-auto align-middle grid-cols-[1fr,3fr] justify-items-center"
   >
     <h1 class="col-span-2 mb-4 text-2xl font-bold">Number Convertion Tool</h1>
     <label
