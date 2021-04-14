@@ -1,8 +1,10 @@
 <template>
   <div
-    class="grid gap-4 my-auto align-middle grid-cols-[1fr,3fr] justify-items-center"
+    class="grid gap-4 my-auto align-middle grid-cols-[2fr,3fr,1fr] justify-items-center"
   >
-    <h1 class="col-span-2 mb-4 text-2xl font-bold">Number Convertion Tool</h1>
+    <h1 class="col-span-3 mt-8 mb-4 text-2xl font-bold">
+      Number Convertion Tool
+    </h1>
     <label
       for="decimal"
       class="self-center font-semibold text-gray-700 justify-self-end"
@@ -20,6 +22,7 @@
       />
       <Button @copy="copyToClipboard(decimal)"></Button>
     </div>
+    <div class="w-full"></div>
 
     <label
       for="binary"
@@ -40,6 +43,7 @@
       />
       <Button @copy="copyToClipboard(binary)"></Button>
     </div>
+    <div class="w-full"></div>
 
     <label
       for="octal"
@@ -60,6 +64,7 @@
       />
       <Button @copy="copyToClipboard(octal)"></Button>
     </div>
+    <div class="w-full"></div>
 
     <label
       for="hexadecimal"
@@ -80,6 +85,7 @@
       />
       <Button @copy="copyToClipboard(hexadecimal)" />
     </div>
+    <div class="w-full"></div>
   </div>
 </template>
 
