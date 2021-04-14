@@ -1,4 +1,5 @@
 {
+  "css.validate": false,
   "headwind.classRegex": {
     "html": "\\bclass\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']",
     "css": "\\B@apply\\s+([_a-zA-Z0-9\\s\\-\\:\\/]+);",
