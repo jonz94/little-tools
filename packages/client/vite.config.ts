@@ -7,6 +7,7 @@ export default defineConfig({
     vue(),
     {
       name: 'cross-origin-isolated',
+      apply: 'serve',
       configureServer({ middlewares }) {
         middlewares.use((_, res, next) => {
           res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
