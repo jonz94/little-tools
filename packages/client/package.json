@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "serve -c serve.json"
   },
   "dependencies": {
     "vue": "^3.0.11"
@@ -16,6 +16,7 @@
     "@vuedx/typescript-plugin-vue": "^0.6.3",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.10",
+    "serve": "^11.3.2",
     "tailwindcss": "^2.1.1",
     "typescript": "^4.2.4",
     "vite": "^2.1.5",
