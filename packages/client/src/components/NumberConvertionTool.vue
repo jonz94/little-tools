@@ -78,7 +78,7 @@
         type="text"
         class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
       />
-      <Button @copy="copyToClipboard(hexadecimal)"></Button>
+      <Button @copy="copyToClipboard(hexadecimal)" />
     </div>
   </div>
 </template>

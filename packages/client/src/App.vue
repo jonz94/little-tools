@@ -1,5 +1,5 @@
 <template>
-  <NumberConvertionTool></NumberConvertionTool>
+  <NumberConvertionTool />
 </template>
 
 <script lang="ts">
