@@ -7,5 +7,5 @@ import './index.css';
 const app = createApp(App);
 
 app.use(router);
-app.use(WasmVipsPlugin, { debug: true });
+app.use(WasmVipsPlugin);
 app.mount('#app');
