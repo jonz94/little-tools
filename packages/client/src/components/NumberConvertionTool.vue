@@ -2,7 +2,7 @@
   <div
     class="grid gap-4 my-auto align-middle grid-cols-[2fr,3fr,1fr] justify-items-center"
   >
-    <h1 class="col-span-3 mt-8 mb-4 text-2xl font-bold">
+    <h1 class="col-span-full mt-8 mb-4 text-2xl font-bold">
       Number Convertion Tool
     </h1>
     <label
