@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import NProgress from 'nprogress';
+
 // 1. Define route components.
 import ImageConvertionTool from './components/ImageConvertionTool.vue';
 import NumberConvertionTool from './components/NumberConvertionTool.vue';
@@ -15,6 +17,16 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes, // short for `routes: routes`
+});
+
+router.beforeEach(() => {
+  NProgress.start();
+  return true;
+});
+
+router.afterEach(() => {
+  NProgress.done();
+  return true;
 });
 
 export { router };
