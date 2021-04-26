@@ -7,8 +7,10 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "yarn client build",
     "client": "yarn workspace @little-tools/client",
-    "deploy": "git checkout production && git rebase main && git push && git checkout main"
+    "deploy": "git checkout production && git rebase main && git push && git checkout main",
+    "dev": "yarn client dev"
   },
   "devDependencies": {
     "@jonz94/prettier-config": "^1.0.1",
