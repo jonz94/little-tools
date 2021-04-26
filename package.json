@@ -12,8 +12,13 @@
     "deploy": "git checkout production && git rebase main && git push && git checkout main",
     "dev": "yarn client dev"
   },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "devDependencies": {
-    "@jonz94/prettier-config": "^1.0.1",
     "prettier": "^2.2.1",
     "prettier-plugin-packagejson": "^2.2.10"
   }
