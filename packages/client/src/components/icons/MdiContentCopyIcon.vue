@@ -11,5 +11,5 @@
 <script>
 export default {
   name: 'MdiContentCopyIcon',
-};
+}
 </script>

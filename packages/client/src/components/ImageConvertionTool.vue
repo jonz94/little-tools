@@ -21,55 +21,55 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'ImageConvertionTool',
 
   setup() {
-    const isVipsLoaded = ref(false);
-    const imageUrl = ref<string>('');
-    const isProcessing = ref(false);
+    const isVipsLoaded = ref(false)
+    const imageUrl = ref<string>('')
+    const isProcessing = ref(false)
 
-    return { isVipsLoaded, isProcessing, imageUrl };
+    return { isVipsLoaded, isProcessing, imageUrl }
   },
   mounted() {
-    this.check();
+    this.check()
   },
   methods: {
     check() {
       if (!this?.$vips?.Image) {
-        setTimeout(() => this.check(), 1000);
-        return;
+        setTimeout(() => this.check(), 1000)
+        return
       }
 
-      this.isVipsLoaded = true;
+      this.isVipsLoaded = true
     },
     async run() {
       if (!this?.$vips?.Image) {
-        console.error('vips is not loaded or is still loading');
-        return;
+        console.error('vips is not loaded or is still loading')
+        return
       }
 
-      this.isProcessing = true;
+      this.isProcessing = true
 
       // Load image to a buffer
       const originalImageBuffer = await fetch('shirakami-fubuki.webp')
         .then((response) => response.blob())
-        .then((blob) => blob.arrayBuffer());
+        .then((blob) => blob.arrayBuffer())
 
       // Create a vips image instance from a buffer
-      const image = this.$vips.Image.newFromBuffer(originalImageBuffer);
+      const image = this.$vips.Image.newFromBuffer(originalImageBuffer)
 
-      const resultImageBuffer = new Uint8Array(image.writeToBuffer('.png'));
-      const blob = new Blob([resultImageBuffer], { type: 'image/png' });
-      const url = URL.createObjectURL(blob);
+      const resultImageBuffer = new Uint8Array(image.writeToBuffer('.png'))
+      const blob = new Blob([resultImageBuffer], { type: 'image/png' })
+      const url = URL.createObjectURL(blob)
 
-      console.log(url);
+      console.log(url)
 
-      this.imageUrl = url;
-      this.isProcessing = false;
+      this.imageUrl = url
+      this.isProcessing = false
     },
   },
-});
+})
 </script>

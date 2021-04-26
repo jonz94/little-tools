@@ -8,12 +8,12 @@
 </template>
 
 <script lang="ts">
-import MdiContentCopyIcon from './icons/MdiContentCopyIcon.vue';
+import MdiContentCopyIcon from './icons/MdiContentCopyIcon.vue'
 
 export default {
   name: 'Button',
   components: {
     MdiContentCopyIcon,
   },
-};
+}
 </script>

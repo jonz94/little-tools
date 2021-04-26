@@ -1,14 +1,7 @@
 <template>
-  <div
-    class="grid gap-4 my-auto align-middle grid-cols-[2fr,3fr,1fr] justify-items-center"
-  >
-    <h1 class="col-span-full mt-8 mb-4 text-2xl font-bold">
-      Number Convertion Tool
-    </h1>
-    <label
-      for="decimal"
-      class="self-center font-semibold text-gray-700 justify-self-end"
-    >
+  <div class="grid gap-4 my-auto align-middle grid-cols-[2fr,3fr,1fr] justify-items-center">
+    <h1 class="mt-8 mb-4 text-2xl font-bold col-span-full">Number Convertion Tool</h1>
+    <label for="decimal" class="self-center font-semibold text-gray-700 justify-self-end">
       decimal
     </label>
     <div class="flex w-full">
@@ -24,16 +17,11 @@
     </div>
     <div class="w-full"></div>
 
-    <label
-      for="binary"
-      class="self-center font-semibold text-gray-700 justify-self-end"
-    >
+    <label for="binary" class="self-center font-semibold text-gray-700 justify-self-end">
       binary
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
-        0b
-      </div>
+      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">0b</div>
       <input
         v-model="binary"
         @keyup="calculateFromBinary()"
@@ -45,16 +33,11 @@
     </div>
     <div class="w-full"></div>
 
-    <label
-      for="octal"
-      class="self-center font-semibold text-gray-700 justify-self-end"
-    >
+    <label for="octal" class="self-center font-semibold text-gray-700 justify-self-end">
       octal
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
-        0o
-      </div>
+      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">0o</div>
       <input
         v-model="octal"
         @keyup="calculateFromOctal()"
@@ -66,16 +49,11 @@
     </div>
     <div class="w-full"></div>
 
-    <label
-      for="hexadecimal"
-      class="self-center font-semibold text-gray-700 justify-self-end"
-    >
+    <label for="hexadecimal" class="self-center font-semibold text-gray-700 justify-self-end">
       hexadecimal
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">
-        0x
-      </div>
+      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">0x</div>
       <input
         v-model="hexadecimal"
         @keyup="calculateFromHexadecimal()"
@@ -90,15 +68,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Button from './Button.vue';
+import { defineComponent } from 'vue'
+import Button from './Button.vue'
 
 function fromDecimal(decimal: string, base: number) {
-  return Number(decimal).toString(base);
+  return Number(decimal).toString(base)
 }
 
 function toDecimal(input: string, base: number) {
-  return parseInt(input, base).toString();
+  return parseInt(input, base).toString()
 }
 
 export default defineComponent({
@@ -112,79 +90,79 @@ export default defineComponent({
       binary: fromDecimal('123', 2),
       octal: fromDecimal('123', 8),
       hexadecimal: fromDecimal('123', 16),
-    };
+    }
   },
   methods: {
     calculateFromDecimal() {
       if (this.decimal === '') {
-        this.binary = this.octal = this.hexadecimal = '';
+        this.binary = this.octal = this.hexadecimal = ''
 
-        return;
+        return
       }
 
       if (/^\d+$/.test(this.decimal) === false) {
-        this.binary = this.octal = this.hexadecimal = 'Invalid Input';
+        this.binary = this.octal = this.hexadecimal = 'Invalid Input'
 
-        return;
+        return
       }
 
-      this.binary = fromDecimal(this.decimal, 2);
-      this.octal = fromDecimal(this.decimal, 8);
-      this.hexadecimal = fromDecimal(this.decimal, 16);
+      this.binary = fromDecimal(this.decimal, 2)
+      this.octal = fromDecimal(this.decimal, 8)
+      this.hexadecimal = fromDecimal(this.decimal, 16)
     },
     calculateFromBinary() {
       if (this.binary === '') {
-        this.decimal = this.octal = this.hexadecimal = '';
+        this.decimal = this.octal = this.hexadecimal = ''
 
-        return;
+        return
       }
 
       if (/^[0-1]+$/.test(this.binary) === false) {
-        this.decimal = this.octal = this.hexadecimal = 'Invalid Input';
+        this.decimal = this.octal = this.hexadecimal = 'Invalid Input'
 
-        return;
+        return
       }
 
-      this.decimal = toDecimal(this.binary, 2);
+      this.decimal = toDecimal(this.binary, 2)
 
-      this.octal = fromDecimal(this.decimal, 8);
-      this.hexadecimal = fromDecimal(this.decimal, 16);
+      this.octal = fromDecimal(this.decimal, 8)
+      this.hexadecimal = fromDecimal(this.decimal, 16)
     },
     calculateFromOctal() {
       if (this.octal === '') {
-        this.decimal = this.binary = this.hexadecimal = '';
+        this.decimal = this.binary = this.hexadecimal = ''
 
-        return;
+        return
       }
 
       if (/^[0-7]+$/.test(this.octal) === false) {
-        this.decimal = this.binary = this.hexadecimal = 'Invalid Input';
+        this.decimal = this.binary = this.hexadecimal = 'Invalid Input'
 
-        return;
+        return
       }
 
-      this.decimal = toDecimal(this.octal, 8);
+      this.decimal = toDecimal(this.octal, 8)
 
-      this.binary = fromDecimal(this.decimal, 2);
-      this.hexadecimal = fromDecimal(this.decimal, 16);
+      this.binary = fromDecimal(this.decimal, 2)
+      this.hexadecimal = fromDecimal(this.decimal, 16)
     },
     calculateFromHexadecimal() {
       if (this.hexadecimal === '') {
-        this.decimal = this.binary = this.octal = '';
+        this.decimal = this.binary = this.octal = ''
 
-        return;
+        return
       }
 
       if (/^[0-9a-fA-F]+$/.test(this.hexadecimal) === false) {
-        this.decimal = this.binary = this.octal = 'Invalid Input';
+        this.decimal = this.binary = this.octal = 'Invalid Input'
 
-        return;
+        return
       }
 
-      this.decimal = toDecimal(this.hexadecimal, 16);
+      this.decimal = toDecimal(this.hexadecimal, 16)
 
-      this.binary = fromDecimal(this.decimal, 2);
-      this.octal = fromDecimal(this.decimal, 8);
+      this.binary = fromDecimal(this.decimal, 2)
+      this.octal = fromDecimal(this.decimal, 8)
     },
     async copyToClipboard(text: string) {
       if (
@@ -192,15 +170,15 @@ export default defineComponent({
         !navigator.clipboard ||
         !navigator.clipboard.writeText
       ) {
-        console.error('Writting to clipboard not supported in this browser');
+        console.error('Writting to clipboard not supported in this browser')
       }
 
       try {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(text)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       }
     },
   },
-});
+})
 </script>

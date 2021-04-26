@@ -5,4 +5,4 @@ module.exports = {
     'vetur.experimental.templateInterpolationService': true,
   },
   projects: ['./packages/client'],
-};
+}

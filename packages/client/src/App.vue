@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import SidebarMenu from './components/SidebarMenu.vue';
+import { defineComponent } from 'vue'
+import SidebarMenu from './components/SidebarMenu.vue'
 
 export default defineComponent({
   name: 'App',
   components: { SidebarMenu },
-});
+})
 </script>
