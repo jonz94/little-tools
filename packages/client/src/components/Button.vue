@@ -8,12 +8,13 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue'
 import MdiContentCopyIcon from './icons/MdiContentCopyIcon.vue'
 
-export default {
+export default defineComponent({
   name: 'Button',
   components: {
     MdiContentCopyIcon,
   },
-}
+})
 </script>
