@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          # yarn cache files are stored in `~/.cache/yarn` on Linux
+          path: ~/.cache/yarn
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Run build
+        run: yarn build
+
+      - name: Run test
+        run: yarn test
