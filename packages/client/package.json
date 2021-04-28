@@ -8,6 +8,22 @@
     "serve": "node serve.js dist",
     "test": "jest"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "vue",
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.vue$": "vue-jest"
+    }
+  },
   "dependencies": {
     "nprogress": "^0.2.0",
     "vue": "^3.0.11",
