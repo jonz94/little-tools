@@ -17,16 +17,14 @@ jobs:
           check-latest: true
 
       - name: Cache Node.js modules
+        id: node-modules-cache
         uses: actions/cache@v2
         with:
-          # yarn cache files are stored in `~/.cache/yarn` on Linux
-          path: ~/.cache/yarn
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
 
       - name: Run build
