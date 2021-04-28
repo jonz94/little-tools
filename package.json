@@ -10,7 +10,8 @@
     "build": "yarn client build",
     "client": "yarn workspace @little-tools/client",
     "deploy": "git checkout production && git rebase main && git push && git checkout main",
-    "dev": "yarn client dev"
+    "dev": "yarn client dev",
+    "test": "yarn client test"
   },
   "prettier": {
     "printWidth": 100,
