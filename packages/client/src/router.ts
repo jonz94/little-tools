@@ -2,13 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NProgress from 'nprogress'
 
 // 1. Define route components.
-import ImageConvertionTool from './components/ImageConvertionTool.vue'
-import NumberConvertionTool from './components/NumberConvertionTool.vue'
+import ImageConversionTool from './components/ImageConversionTool.vue'
+import NumberConversionTool from './components/NumberConversionTool.vue'
 
 // 2. Define some routes
 const routes = [
-  { path: '/', component: ImageConvertionTool },
-  { path: '/number', component: NumberConvertionTool },
+  { path: '/', component: ImageConversionTool },
+  { path: '/number', component: NumberConversionTool },
 ]
 
 // 3. Create the router instance and pass the `routes` option

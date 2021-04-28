@@ -1,6 +1,6 @@
 <template>
   <div class="grid gap-4 my-auto align-middle grid-cols-[2fr,3fr,1fr] justify-items-center">
-    <h1 class="mt-8 mb-4 text-2xl font-bold col-span-full">Number Convertion Tool</h1>
+    <h1 class="mt-8 mb-4 text-2xl font-bold col-span-full">Number Conversion Tool</h1>
     <label for="decimal" class="self-center font-semibold text-gray-700 justify-self-end">
       decimal
     </label>
@@ -80,7 +80,7 @@ function toDecimal(input: string, base: number) {
 }
 
 export default defineComponent({
-  name: 'NumberConvertionTool',
+  name: 'NumberConversionTool',
   components: {
     Button,
   },

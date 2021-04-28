@@ -13,7 +13,7 @@ test('app is working at /', async () => {
 
   await router.push('/')
 
-  expect(wrapper.html()).toContain('Image Convertion Tool (WIP)')
+  expect(wrapper.html()).toContain('Image Conversion Tool (WIP)')
 })
 
 test('app is working at /number', async () => {
@@ -27,5 +27,5 @@ test('app is working at /number', async () => {
 
   await router.push('/number')
 
-  expect(wrapper.find('h1').text()).toBe('Number Convertion Tool')
+  expect(wrapper.find('h1').text()).toBe('Number Conversion Tool')
 })

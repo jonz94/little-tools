@@ -1,6 +1,6 @@
 <template>
   <div class="grid content-center min-h-screen gap-8 justify-items-center">
-    <h1 class="mt-8 text-2xl font-bold">Image Convertion Tool (WIP)</h1>
+    <h1 class="mt-8 text-2xl font-bold">Image Conversion Tool (WIP)</h1>
     <h2 class="text-xl font-bold">
       Before:
       <code class="px-2 py-1 text-red-600 bg-red-200 rounded">.webp</code>
@@ -24,7 +24,7 @@
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: 'ImageConvertionTool',
+  name: 'ImageConversionTool',
 
   setup() {
     const isVipsLoaded = ref(false)
