@@ -20,7 +20,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "prettier": "^2.2.1",
-    "prettier-plugin-packagejson": "^2.2.10"
+    "prettier": "^2.3.0",
+    "prettier-plugin-packagejson": "^2.2.11"
   }
 }
