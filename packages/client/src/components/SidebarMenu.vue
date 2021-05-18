@@ -1,11 +1,30 @@
 <template>
   <div
-    class="flex flex-col flex-shrink-0 w-full text-gray-700 bg-white shadow md:w-64 dark:text-gray-200 dark:bg-gray-800"
+    class="
+      flex flex-col flex-shrink-0
+      w-full
+      text-gray-700
+      bg-white
+      shadow
+      md:w-64
+      dark:text-gray-200
+      dark:bg-gray-800
+    "
   >
     <div class="flex flex-row items-center justify-between flex-shrink-0 px-8 py-4">
       <a
         href="#"
-        class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline"
+        class="
+          text-lg
+          font-semibold
+          tracking-widest
+          text-gray-900
+          uppercase
+          rounded-lg
+          dark:text-white
+          focus:outline-none
+          focus:shadow-outline
+        "
       >
         Little Tools
       </a>
@@ -35,13 +54,56 @@
     >
       <router-link
         to="/"
-        class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+        class="
+          block
+          px-4
+          py-2
+          mt-2
+          text-sm
+          font-semibold
+          text-gray-900
+          rounded-lg
+          dark:bg-gray-700
+          dark:hover:bg-gray-600
+          dark:focus:bg-gray-600
+          dark:focus:text-white
+          dark:hover:text-white
+          dark:text-gray-200
+          hover:text-gray-900
+          focus:text-gray-900
+          hover:bg-gray-200
+          focus:bg-gray-200
+          focus:outline-none
+          focus:shadow-outline
+        "
       >
         Image Conversion Tool
       </router-link>
       <router-link
         to="/number"
-        class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+        class="
+          block
+          px-4
+          py-2
+          mt-2
+          text-sm
+          font-semibold
+          text-gray-900
+          bg-transparent
+          rounded-lg
+          dark:bg-transparent
+          dark:hover:bg-gray-600
+          dark:focus:bg-gray-600
+          dark:focus:text-white
+          dark:hover:text-white
+          dark:text-gray-200
+          hover:text-gray-900
+          focus:text-gray-900
+          hover:bg-gray-200
+          focus:bg-gray-200
+          focus:outline-none
+          focus:shadow-outline
+        "
       >
         Number Conversion Tool
       </router-link>

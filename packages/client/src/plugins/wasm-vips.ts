@@ -26,7 +26,6 @@ export const WasmVipsPlugin: Plugin = {
   install: (app, options: WasmVipsPluginOptions) => {
     const log = options?.debug === true ? console.log : () => {}
     log({ options })
-
     ;(async () => {
       await injectScript(options?.scriptSrc)
       app.config.globalProperties.$vips = await (window as any).Vips()

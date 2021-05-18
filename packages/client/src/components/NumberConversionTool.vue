@@ -1,65 +1,113 @@
 <template>
   <div class="grid gap-4 my-auto align-middle grid-cols-[2fr,3fr,1fr] justify-items-center">
-    <h1 class="mt-8 mb-4 text-2xl font-bold col-span-full">Number Conversion Tool</h1>
-    <label for="decimal" class="self-center font-semibold text-gray-700 justify-self-end">
+    <h1 class="col-span-full mt-8 mb-4 text-2xl font-bold">Number Conversion Tool</h1>
+    <label for="decimal" class="justify-self-end self-center font-semibold text-gray-700">
       decimal
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2"></div>
+      <div class="py-2 px-3 w-12"></div>
       <input
         v-model="decimal"
         @keyup="calculateFromDecimal()"
         id="decimal"
         type="text"
-        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:shadow-outline"
+        class="
+          py-2
+          px-3
+          w-full
+          h-10
+          leading-tight
+          text-gray-700
+          bg-gray-200
+          rounded
+          appearance-none
+          focus:outline-none
+          focus:shadow-outline
+        "
       />
       <Button @copy="copyToClipboard(decimal)"></Button>
     </div>
     <div class="w-full"></div>
 
-    <label for="binary" class="self-center font-semibold text-gray-700 justify-self-end">
+    <label for="binary" class="justify-self-end self-center font-semibold text-gray-700">
       binary
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">0b</div>
+      <div class="py-2 px-3 w-12 text-white bg-gray-700 rounded-tl rounded-bl">0b</div>
       <input
         v-model="binary"
         @keyup="calculateFromBinary()"
         id="binary"
         type="text"
-        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
+        class="
+          py-2
+          px-3
+          w-full
+          h-10
+          leading-tight
+          text-gray-700
+          bg-gray-200
+          rounded-tr rounded-br
+          appearance-none
+          focus:outline-none
+          focus:shadow-outline
+        "
       />
       <Button @copy="copyToClipboard(binary)"></Button>
     </div>
     <div class="w-full"></div>
 
-    <label for="octal" class="self-center font-semibold text-gray-700 justify-self-end">
+    <label for="octal" class="justify-self-end self-center font-semibold text-gray-700">
       octal
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">0o</div>
+      <div class="py-2 px-3 w-12 text-white bg-gray-700 rounded-tl rounded-bl">0o</div>
       <input
         v-model="octal"
         @keyup="calculateFromOctal()"
         id="octal"
         type="text"
-        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
+        class="
+          py-2
+          px-3
+          w-full
+          h-10
+          leading-tight
+          text-gray-700
+          bg-gray-200
+          rounded-tr rounded-br
+          appearance-none
+          focus:outline-none
+          focus:shadow-outline
+        "
       />
       <Button @copy="copyToClipboard(octal)"></Button>
     </div>
     <div class="w-full"></div>
 
-    <label for="hexadecimal" class="self-center font-semibold text-gray-700 justify-self-end">
+    <label for="hexadecimal" class="justify-self-end self-center font-semibold text-gray-700">
       hexadecimal
     </label>
     <div class="flex w-full">
-      <div class="w-12 px-3 py-2 text-white bg-gray-700 rounded-tl rounded-bl">0x</div>
+      <div class="py-2 px-3 w-12 text-white bg-gray-700 rounded-tl rounded-bl">0x</div>
       <input
         v-model="hexadecimal"
         @keyup="calculateFromHexadecimal()"
         id="hexadecimal"
         type="text"
-        class="w-full h-10 px-3 py-2 leading-tight text-gray-700 bg-gray-200 rounded-tr rounded-br appearance-none focus:outline-none focus:shadow-outline"
+        class="
+          py-2
+          px-3
+          w-full
+          h-10
+          leading-tight
+          text-gray-700
+          bg-gray-200
+          rounded-tr rounded-br
+          appearance-none
+          focus:outline-none
+          focus:shadow-outline
+        "
       />
       <Button @copy="copyToClipboard(hexadecimal)" />
     </div>
